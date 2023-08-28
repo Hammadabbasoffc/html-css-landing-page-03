@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html ,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main img{
+    height: 600px;
+    position: relative;
+    z-index: 99;
+    object-fit: cover;
+}
+
+#scroll-div{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div h1{
+    display: inline-block;
+    font-size: 150px;
+    text-transform: uppercase;
+
+    margin-right: 30px;
+    letter-spacing: 3px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* this is second number  */
+
+
+#scroll-div2{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    z-index: 100;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div2::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div2 h1{
+    display: inline-block;
+    font-size: 150px;
+    text-transform: uppercase;
+
+    margin-right: 30px;
+    letter-spacing: 3px;
+    color: transparent;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+
+/* this is three number  */
+
+#scroll-div3{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    /* height: 100px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div3::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div3 h1{
+    display: inline-block;
+    font-size: 150px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 3px;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+#text{
+    font-size: 30px;
+    position: absolute;
+    width: 60%;
+    /* background-color: red; */
+    z-index: 999;
+    top: 5%;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translate(calc(-100% - 33px));
+    }
+    100%{
+        transform: translate(0);
+    }
+}
